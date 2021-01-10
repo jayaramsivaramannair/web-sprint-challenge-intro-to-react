@@ -4,11 +4,16 @@ import React from 'react';
 import styled from 'styled-components';
 import Expand from './Expand.js';
 
-const Character = ({name, avatar, gender, species, status, location}) => {
+const Character = ({name, avatar, gender, species, status, location, origin}) => {
     return (
         <CardContainer>
             <CardHeader>{name.toUpperCase()}</CardHeader>
-            <Expand avatar = {avatar} gender = {gender} species = {species} status = {status} location = {location}/>
+            <Expand avatar = {avatar} 
+            gender = {gender} 
+            species = {species} 
+            status = {status} 
+            location = {location}
+            origin = {origin}/>
         </CardContainer>
 
     );

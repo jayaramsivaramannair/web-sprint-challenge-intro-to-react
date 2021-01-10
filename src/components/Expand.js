@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Collapse, Container, Row, Col} from 'reactstrap';
 
-const Expand = ({avatar, gender, species, status, location}) => {
+const Expand = ({avatar, gender, species, status, location, origin}) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -17,6 +17,8 @@ const Expand = ({avatar, gender, species, status, location}) => {
                 <p><span>Status :</span>{ status}</p>
                 <hr/>
                 <p><span>Location :</span>{ location}</p>
+                <hr/>
+                <p><span>Origin :</span>{origin}</p>
                 <hr/>
                 <Container>
                     <Row>
