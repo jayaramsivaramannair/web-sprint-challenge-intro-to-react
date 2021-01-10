@@ -2,27 +2,13 @@
 //Chacters from Rick and Morty's Universe
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col} from 'reactstrap';
+import Expand from './Expand.js';
 
 const Character = ({name, avatar, gender, species, status, location}) => {
     return (
         <CardContainer>
-            <CardHeader>CHARACTER: {name.toUpperCase()}</CardHeader>
-            <CardText><span>Gender :</span>{ gender}</CardText>
-            <hr/>
-            <CardText><span>Species :</span>{ species}</CardText>
-            <hr/>
-            <CardText><span>Status :</span>{ status}</CardText>
-            <hr/>
-            <CardText><span>Location :</span>{ location}</CardText>
-            <hr/>
-            <Container>
-                <Row>
-                    <Col>
-                        <RoundedImage src={avatar} className="img-fluid"/>
-                    </Col>
-                </Row>
-            </Container>
+            <CardHeader>{name.toUpperCase()}</CardHeader>
+            <Expand avatar = {avatar} gender = {gender} species = {species} status = {status} location = {location}/>
         </CardContainer>
 
     );
@@ -30,9 +16,7 @@ const Character = ({name, avatar, gender, species, status, location}) => {
 
 export default Character;
 
-const RoundedImage = styled.img`
-    border-radius: 50%;
-`;
+
 
 const CardContainer = styled.div`
     text-align: center;
@@ -41,15 +25,10 @@ const CardContainer = styled.div`
     padding: 25px 25px;
     margin: 10px 5px;
     font-size: 0.5em;
-    display: inline-block;
     font-family: 'Philosopher', sans-serif;
 `;
 
 const CardHeader = styled.h1`
-    font-size: 1.2em;
+    font-size: 1.5em;
 `;
-
-const CardText = styled.div`
-    font-weight: bold;
-`
 
