@@ -41,7 +41,7 @@ const App = () => {
 
 const Header = styled.p`
   color: black;
-  text-align: left;
+  text-align: center;
   font-size: 2.5rem;
 
 `;

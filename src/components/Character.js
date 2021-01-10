@@ -8,10 +8,10 @@ const Character = ({name, avatar, gender, species, status, location}) => {
     return (
         <CardContainer>
             <CardHeader>CHARACTER: {name.toUpperCase()}</CardHeader>
-            <CardText><span>Gender:</span>{gender}</CardText>
-            <CardText><span>Species:</span>{species}</CardText>
-            <CardText><span>Status:</span>{status}</CardText>
-            <CardText><span>Location:</span>{location}</CardText>
+            <CardText><span>Gender :</span>{ gender}</CardText>
+            <CardText><span>Species :</span>{ species}</CardText>
+            <CardText><span>Status :</span>{ status}</CardText>
+            <CardText><span>Location :</span>{ location}</CardText>
             <Container>
                 <Row>
                     <Col>
@@ -38,6 +38,7 @@ const CardContainer = styled.div`
     margin: 10px 5px;
     font-size: 0.75em;
     display: inline-block;
+    font-family: 'Philosopher', sans-serif;
 `;
 
 const CardHeader = styled.h1`
@@ -45,7 +46,6 @@ const CardHeader = styled.h1`
 `;
 
 const CardText = styled.div`
-    font-size: 0.75em;
     font-weight: bold;
 `
 
