@@ -53,9 +53,11 @@ const App = () => {
 };
 
 const Header = styled.p`
-  color: black;
+  color: #7FBB43;
   text-align: center;
   font-size: 2.5rem;
+  font-family: 'Dokdo', cursive;
+  font-weight: bold;
 
 `;
 

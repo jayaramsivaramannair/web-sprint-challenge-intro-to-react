@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import styled from 'styled-components';
 
 const PageFilter = ({pages, pageNumber, onClick}) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -13,8 +14,9 @@ const PageFilter = ({pages, pageNumber, onClick}) => {
 
     return (
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+            <DropDownHeading> Click Here To Explore Rick and Morty's World: </DropDownHeading>
             <DropdownToggle caret>
-                {pageNumber}
+                {` ${pageNumber}`}
             </DropdownToggle>
             <DropdownMenu>
                 {pagesArray.map((page) => {
@@ -27,4 +29,9 @@ const PageFilter = ({pages, pageNumber, onClick}) => {
 }
 
 export default PageFilter;
+
+const DropDownHeading = styled.h6`
+    display: inline-block;
+    color: #7FBB43;
+`;
 
