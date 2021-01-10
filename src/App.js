@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import axios from 'axios';
-import Character from './components/Character'
+import Character from './components/Character';
 import styled from 'styled-components';
+import { Container, Row, Col} from 'reactstrap';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -15,7 +16,7 @@ const App = () => {
   //The below api call is made only on initial website load
 
   useEffect(() => {
-      axios.get("https://rickandmortyapi.com/api/character/11,12,13,14,15,16,17,18,19,20")
+      axios.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10")
       .then((response) => {console.log(response.data); setCharacters(response.data)})
       .catch((error) => console.log(error));
   }, [])
@@ -24,20 +25,30 @@ const App = () => {
   return (
     <AppContainer className="App">
       <Header className="Header">Rick and Morty's Universe</Header>
-      {characters.map((character) => {
-        return (
-        <Character key={`key${character.id}`} name={character.name} avatar={character.image} gender={character.gender} species={character.species} status={character.status} location={character.location.name}/>     
-      )})} 
+      <Container>
+        <Row>
+          <Col>
+            {characters.map((character) => {
+            return (
+            <Character key={`key${character.id}`} name={character.name} avatar={character.image} gender={character.gender} species={character.species} status={character.status} location={character.location.name}/>     
+            )})} 
+          </Col>
+        </Row>
+      </Container>
     </AppContainer>
   );
 };
 
-const Header = styled.h1`
-  color: #C0E218;
+const Header = styled.p`
+  color: black;
+  text-align: left;
+  font-size: 2.5rem;
+
 `;
 
 const AppContainer = styled.div`
   font-family: 'Dokdo', cursive;
+  margin: 0;
 `;
 
 export default App;
