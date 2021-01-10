@@ -9,9 +9,13 @@ const Character = ({name, avatar, gender, species, status, location}) => {
         <CardContainer>
             <CardHeader>CHARACTER: {name.toUpperCase()}</CardHeader>
             <CardText><span>Gender :</span>{ gender}</CardText>
+            <hr/>
             <CardText><span>Species :</span>{ species}</CardText>
+            <hr/>
             <CardText><span>Status :</span>{ status}</CardText>
+            <hr/>
             <CardText><span>Location :</span>{ location}</CardText>
+            <hr/>
             <Container>
                 <Row>
                     <Col>
@@ -36,7 +40,7 @@ const CardContainer = styled.div`
     border-radius: 25px;
     padding: 25px 25px;
     margin: 10px 5px;
-    font-size: 0.75em;
+    font-size: 0.5em;
     display: inline-block;
     font-family: 'Philosopher', sans-serif;
 `;
