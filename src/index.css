@@ -10,7 +10,7 @@ body {
 
 #root::before {
   content: "";
-  background-image: url('./images/rm-bg.jpg');
+  background-image: url('./images/rm-2-bg.jpeg');
   background-size: contain;
   position: absolute;
   top: 0px;

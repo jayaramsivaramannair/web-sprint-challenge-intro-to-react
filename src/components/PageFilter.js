@@ -32,6 +32,6 @@ export default PageFilter;
 
 const DropDownHeading = styled.h6`
     display: inline-block;
-    color: #7FBB43;
+    color: #24325FFF;
 `;
 

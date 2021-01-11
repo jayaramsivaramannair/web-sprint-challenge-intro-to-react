@@ -8,7 +8,7 @@ const Expand = ({avatar, gender, species, status, location, origin}) => {
 
     return (
         <div>
-            <StyledButton onClick={toggle}>{isOpen ? "Contract" : "Expand"}</StyledButton>
+            <StyledButton onClick={toggle}>{isOpen ? "Close" : "Open"}</StyledButton>
             <Collapse isOpen={isOpen}>
                 <p><span>Gender :</span>{ gender}</p>
                 <hr/>
@@ -39,7 +39,7 @@ const RoundedImage = styled.img`
 `;
 
 const StyledButton = styled.button`
-    color: #7FBB43;
+    color: #24325FFF;
     background-color: white;
-    border: 2px solid #7FBB43;
+    border: 2px solid #24325FFF;
 `

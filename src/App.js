@@ -53,7 +53,7 @@ const App = () => {
 };
 
 const Header = styled.p`
-  color: #7FBB43;
+  color: #24325FFF;
   text-align: center;
   font-size: 2.5rem;
   font-family: 'Dokdo', cursive;
@@ -63,6 +63,7 @@ const Header = styled.p`
 
 const AppContainer = styled.div`
   font-family: 'philosopher', cursive;
+  color: #24325FFF
   margin: 0;
 `;
 

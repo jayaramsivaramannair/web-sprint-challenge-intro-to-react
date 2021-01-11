@@ -25,7 +25,7 @@ export default Character;
 
 const CardContainer = styled.div`
     text-align: center;
-    border: 2px solid green;
+    border: 2px solid #24325FFF;
     border-radius: 25px;
     padding: 25px 25px;
     margin: 10px 5px;
