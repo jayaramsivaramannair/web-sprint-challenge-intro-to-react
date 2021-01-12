@@ -29,12 +29,39 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+`React JS is a JavaScript library which is used for building user-interface elements on a webpage such as a button, a search bar, a comment box etc. `
+`Some of the problems which React JS solves are as below:`
+
+`- React JS uses a concept called VIRTUAL DOM to update the DOM without reloading the page and thereby significantly improving the website performance`
+`If a website incorporates a significant amount of data from the real world (such as user comments and likes) which changes in real time then incorporating these changes into the DOM can significantly affect a website's performance` `Virtual DOM allows only changes between the old DOM and the new DOM to be painted instead of painting the entire new DOM to the webpage`
+
+`- React JS distributes elements of a webpage into discrete components where each component would consist of all the required Markup (HTML), styling in some cases and JS code`
+`This distribution of an app into various component thereby makes that component reusable and modular`
+`Thus, React JS allows us to create components once and then have them be reused multiple times either in the same application or a different website`
 
 1. Describe component state.
+`state is used to create and manage data used within an app component`
+`Subsequently, the data managed by the state can change when the user clicks on a button or when an api call is made`
+`This change is data is managed using the setState() method thus the state can never tinkered or changed directly`
+`Any change in data managed by state must flow through the setState() method`
+`The components will be initially rendered based on data stored in the state on website load`
+`On subsequent changes in the data managed by state, React will only re-render the component with the updated state and not the entire DOM`
 
 1. Describe props.
+`props stand for properties. Props enable us to pass data from the parent component to the child component`
+`It is important to note that data flow in React is one-directional which means that it can only flow from a parent to a child`
+`Data is passed to a child element by assigning a logical name and setting it equal to a value which will be the data flowing from parent component in this case`
+`Inside the child component, this data can be accessed using dot operator on the props object`
+`The Biggest difference between props and state is that state is used to manage and create data whereas props is used to pass data`
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+`Side Effects are anything which a component does in addition to returning the elements.`
+`Examples of side effects are obtaining data from a server through api calls, setting and clearing timers, interacting with the DOM.`
+`useEffect() function is used in React to sync changes with updates in certain state or props`
+`useEffect() function takes two arguments.`
+`The first argument is a callback function which is run everytime an update occurs`
+`The second argument is a dependency array which specifies the props / state which needs to be updated for the callback function to be called`
+`The useEffect() function thereby helps us avoid unnecessary calling of the update function everytime a component function is called`
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
